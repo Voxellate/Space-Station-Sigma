@@ -5,12 +5,14 @@ using UnityEngine.UI;
 public class ScreenFader : MonoBehaviour {
 
 	public Image fadeImage;
-	public float fadeSpeed = 0.25f;
+	public float fadeSpeed;
+	public float delay;
 
 	void Start(){
 		fadeImage.color = Color.black;
 	}
 	void Update(){
-		fadeImage.color = Color.Lerp (fadeImage.color, Color.clear, fadeSpeed * Time.deltaTime);
+		float factor = Mathf.Clamp ((0.01f * fadeSpeed) * (Time.time - delay), 0f, 255f);
+		fadeImage.color = Color.Lerp (fadeImage.color, Color.clear, factor);
 		}
 }

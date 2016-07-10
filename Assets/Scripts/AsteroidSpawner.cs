@@ -16,10 +16,10 @@ public class AsteroidSpawner : MonoBehaviour {
 	{
 		while (true) {
 			GameObject hazard = hazards[Random.Range(0, hazards.Length)];
-			Vector3 spawnPosition = new Vector3 (Random.Range(spawnOrigin.x, spawnOrigin.x + spawnBounds.x), Random.Range(0, spawnBounds.y), Random.Range(spawnOrigin.y, spawnOrigin.y + spawnBounds.z));
+			Vector3 spawnPosition = new Vector3 (Random.Range(spawnOrigin.x, spawnOrigin.x + spawnBounds.x), Random.Range(-10, spawnBounds.y), Random.Range(spawnOrigin.y, spawnOrigin.y + spawnBounds.z));
 			Quaternion spawnRotation = Quaternion.identity;
 			Instantiate (hazard, spawnPosition, spawnRotation);
-			yield return new WaitForSeconds (Random.Range(6,10));
+			yield return new WaitForSeconds (1);
 		}
 	}
 }
