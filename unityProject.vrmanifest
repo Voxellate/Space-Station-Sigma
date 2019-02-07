@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.spacestationsigma.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\Lucas\\Documents\\GitHub\\Space-Station-Sigma\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Space Station Sigma [Testing]"
+        }
+      }
+    }
+  ]
+}
